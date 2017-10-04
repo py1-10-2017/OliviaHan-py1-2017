@@ -1,0 +1,24 @@
+C:\Users\hanxue>pip install Django
+Requirement already satisfied: Django in c:\python27\lib\site-packages
+Requirement already satisfied: pytz in c:\python27\lib\site-packages (from Django)
+# try to install django by pip. Returns the message that Django is installed and the path
+
+C:\Users\hanxue>pip list
+DEPRECATION: The default format will switch to columns in the future. You can use --format=(legacy|columns) (or define a format=(legacy|columns) in your pip.conf under the [list] section) to disable this warning.
+Django (1.11.5)
+pip (9.0.1)
+pytz (2017.2)
+setuptools (28.8.0)
+# to list all the installed packages 
+
+pip freeze
+# to output package in required format
+
+pip uninstall Django
+#Django is uninstalled
+
+pip show django
+#nothing appear
+
+pip search Flask
+#search for a package called Flask 
