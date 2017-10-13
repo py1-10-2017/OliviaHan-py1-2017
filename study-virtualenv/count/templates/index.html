@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>count</title>
+  </head>
+  <body>
+    <h1>count: {{ session['count' ]}}</h1>
+    <h1>count: {{ session['count2' ]}}</h1>
+    <form action = '/reset', method='post'>
+      <button>reset</button>
+    </form>
+  </body>
+</html>
