@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>NumberGame</title>
+  </head>
+  <body>
+    <h1>Welcome t othe Great Number Game!</h1>
+    <h3>I am thinking of a number between 1 and 100</h3>
+    <h5>Take a guess</h5>
+
+    <form action = "/type", method = 'post'>
+      <input type ="number" name = "guess">
+      <input type="submit" value="Submit">
+    </form>
+
+    {{ session['result'] }}
+    <!-- {% if session['result'] == 'Too Low' %}
+    <h1>You're Low</h1>
+    {% elif session['result'] == 'Too High' %}
+    <h1>You're High</h1>
+    {% elif session['result'] == 'Matched' %}
+    <h1>You're correct</h1>
+    {% endif %} -->
+
+    <form action = '/reset', method = 'post'>
+      <button>Reset</button>
+
+    </form>
+
+
+
+  </body>
+</html>
