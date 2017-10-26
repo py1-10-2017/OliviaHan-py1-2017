@@ -5,7 +5,17 @@
     <title>sucess</title>
   </head>
   <body>
-  <h1>The email address you entered {{add_email}} is a VALID email address! Thank you!</h1>
+
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        <p>
+          {{message}}
+        </p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
   <h2>Email Address Entered:</h2>
   <ul>
     {% for emailentry in email_list %}

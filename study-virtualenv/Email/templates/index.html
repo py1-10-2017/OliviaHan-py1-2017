@@ -6,9 +6,19 @@
   </head>
   <body>
   <form action = '/add' method = 'POST'>
-  Email Address: <input type = "email" name = 'email'/>
+  Email Address: <input type = "text" name = 'email'/>
   <input type = "submit" name = 'submit' value ='Submit'/>
   </form>
+
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        <p>
+          {{message}}
+        </p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
 
 
   </body>
