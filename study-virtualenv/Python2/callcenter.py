@@ -18,23 +18,31 @@ class Call(object):
 class CallCenter(object):
     def __init__(self):
         self.call = []
-        self.queue = len(self.call)
+
 
     def add_new(self,call):
-        self.call = self.call.append(call)
+        self.call.append(call)
         return self
 
     def remove(self):
         self.call.pop(0)
         return self
 
-    def info(self):
+    def remove_by(self, number):
         for i in self.call:
-            print i.display()
+            if i.caller_num == number:
+                self.call.remove(i)
         return self
 
 
-call1 = Call('olivia','425-638-7251','question')
+    def info(self):
+        for i in self.call:
+            i.display()
 
-callcenter1 = CallCenter()
-callcenter1.add_new(call1).info()
+
+call1 = Call('olivia','425-638-7251','question')
+call2 = Call('Steven','123-456','fun')
+call3 = Call('Julia','425-123-4453', 'defect')
+
+callcenter = CallCenter()
+callcenter.add_new(call1).add_new(call2).add_new(call3).remove_by('123-456').info()
