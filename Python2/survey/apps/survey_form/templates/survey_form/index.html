@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>index</title>
+  </head>
+  <body>
+    <form action ='/process' method ='post'>
+      {% csrf_token %}
+      Your name: <input type = 'text' name = 'name' />
+      Dojo Location:
+      <select name = 'loc'>
+        <option value = 'Mountain Viewe'> Mountain View </option>
+        <option value = 'Seattle'> Seattle </option>
+      </select>
+      Favorite Language: <input type = 'text' name = 'language' />
+      Comment(optional)<textarea name = 'comment'></textarea>
+      <input type = 'submit' value = 'Submit' />
+
+    </form>
+
+
+  </body>
+</html>
