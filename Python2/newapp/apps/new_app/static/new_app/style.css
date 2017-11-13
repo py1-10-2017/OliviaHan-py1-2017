@@ -1,0 +1,9 @@
+.seperator{
+  display: inline-block;
+  margin-left: 40px;
+  vertical-align: top;
+}
+
+.big{
+  font-size: 3em;
+}
