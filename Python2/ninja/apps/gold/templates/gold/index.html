@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>index</title>
+  </head>
+  <body>
+    <h2>Your gold: {{request.session.gold}}</h2>
+
+    <h4>Farm</h4>
+    <p> earns 10 - 20 golds</p>
+    <form action = '/process_money' method = 'POST'>
+      {% csrf_token %}
+      <input type = "submit" name = "submit" value = "Find Gold!" />
+    </form>
+
+    <h2>Activites</h2>
+    {% for a in activities %}
+    <p>
+      {{a}}
+    </p>
+
+
+    {% endfor %}
+
+
+    <a href ='/reset'><button>Reset</button></a>
+
+
+  </body>
+</html>
